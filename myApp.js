@@ -8,6 +8,7 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/views/index.html"); //__dirname is module scoped variable; set to file's absolute directory path
 });
 
+app.use("/public", express.static(__dirname + "/public"));
 
 
 
