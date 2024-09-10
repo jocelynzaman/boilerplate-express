@@ -40,6 +40,10 @@ app.route('/name')
     .get(function (req, res) {
         let userName = req.query.first + ' ' + req.query.last;
         res.json({ "name": userName });
+    })
+    .post(function (req, res) {
+        let userName = req.body.first + ' ' + req.body.last;
+        res.json({ "name": userName });
     });
 
 
